@@ -17,9 +17,9 @@ export function Footer() {
                     <div className="footer-brand">
                         <a href="#home" aria-label="Ir al inicio">
                             <Image
-                                src="/images/logos/mb-consulting-logo-100.png"
-                                alt="MB Consulting"
-                                width={300}
+                                src="/images/logos/mb-solutions-logo-100.png"
+                                alt="MB Solutions"
+                                width={2500}
                                 height={55}
                                 className="footer-logo"
                             />

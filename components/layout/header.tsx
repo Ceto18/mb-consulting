@@ -20,9 +20,9 @@ export function Header() {
             <div className="container nav-wrap">
                 <a className="brand" href="#home" aria-label="Ir al inicio">
                     <Image
-                        src="/images/logos/mb-consulting-logo-100.png"
-                        alt="MB Consulting"
-                        width={300}
+                        src="/images/logos/mb-solutions-logo-100.png"
+                        alt="MB Solutions"
+                        width={250}
                         height={55}
                         className="brand-logo"
                         priority
