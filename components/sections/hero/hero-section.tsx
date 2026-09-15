@@ -1,5 +1,5 @@
 import {
-    ArrowUpRight,
+    ArrowRight,
     CircleCheck,
     CreditCard,
     Globe2,
@@ -24,25 +24,30 @@ export function HeroSection() {
                     </p>
 
                     <h1>
-                        Hacemos que lo digital
-                        <em> trabaje para ti.</em>
+                        Convertimos tus necesidades
+                        <em> en soluciones digitales.</em>
                     </h1>
 
                     <p className="hero-lead">
-                        Diseñamos y desarrollamos soluciones digitales adaptadas
-                        a las necesidades reales de tu negocio, desde una idea
-                        inicial hasta su puesta en marcha.
+                        Diseñamos y desarrollamos soluciones para empresas,
+                        profesionales y emprendimientos que necesitan convertir
+                        ideas, procesos y problemas reales en herramientas que
+                        funcionan.
                     </p>
 
                     <div className="hero-actions">
                         <ActionButton>
                             Cuéntanos tu proyecto
                         </ActionButton>
+                        <a className="button secondary" href="#solutions">
+                            Ver servicios
+                            <ArrowRight />
+                        </a>
                     </div>
 
                     <div className="hero-note">
                         <CircleCheck />
-                        Soluciones pensadas para tu negocio, no paquetes genéricos.
+                        Primero entendemos el problema. Después construimos la solución.
                     </div>
                 </div>
 
@@ -50,7 +55,6 @@ export function HeroSection() {
                 <div className="hero-visual">
 
                     <div className="hero-glow hero-glow-one" />
-                    <div className="hero-glow hero-glow-two" />
 
                     <div className="solution-window">
 
@@ -94,11 +98,6 @@ export function HeroSection() {
                             <div className="solution-map">
 
                                 <div className="map-grid" />
-
-                                <div className="connection connection-1" />
-                                <div className="connection connection-2" />
-                                <div className="connection connection-3" />
-                                <div className="connection connection-4" />
 
                                 <div className="solution-center">
                                     <div className="center-icon">
@@ -209,15 +208,6 @@ export function HeroSection() {
                         <div>
                             <small>Integración</small>
                             <strong>Completada</strong>
-                        </div>
-                    </div>
-
-                    <div className="floating-card floating-card-two">
-                        <span className="pulse-dot" />
-
-                        <div>
-                            <small>Sistema</small>
-                            <strong>Operativo</strong>
                         </div>
                     </div>
 

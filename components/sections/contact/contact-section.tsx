@@ -95,7 +95,7 @@ ${message}
     }
 
     const directWhatsappMessage =
-        'Hola, vi la página de MB Consulting y quisiera consultar sobre un proyecto.'
+        'Hola, vi la página de MB Solutions y quisiera consultar sobre un proyecto.'
 
     const directWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         directWhatsappMessage

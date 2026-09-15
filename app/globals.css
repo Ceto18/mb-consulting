@@ -14,7 +14,7 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: var(--font-inter), "Inter Fallback", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
 }
 :root {
@@ -43,7 +43,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   line-height: 1.55;
 }
 a {
@@ -3316,14 +3316,6 @@ h3 {
   background: #60a5fa35;
 }
 
-.hero-glow-two {
-  width: 240px;
-  height: 240px;
-  left: 20px;
-  bottom: 40px;
-  background: #22d3ee2b;
-}
-
 /* =========================================================
    VENTANA PRINCIPAL
 ========================================================= */
@@ -3607,74 +3599,6 @@ h3 {
 }
 
 /* =========================================================
-   CONEXIONES
-========================================================= */
-
-.connection {
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 150px;
-  height: 1px;
-
-  transform-origin: left center;
-
-  background: linear-gradient(90deg, #60a5fa, #67e8f980);
-}
-
-.connection::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  top: -2px;
-
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: var(--primary);
-
-  box-shadow:
-    0 0 0 4px #60a5fa20,
-    0 0 12px #60a5fa;
-
-  animation: connection-travel 2.8s linear infinite;
-}
-
-.connection-1 {
-  transform: rotate(-146deg);
-}
-
-.connection-2 {
-  transform: rotate(-34deg);
-}
-
-.connection-3 {
-  transform: rotate(146deg);
-}
-
-.connection-4 {
-  transform: rotate(34deg);
-}
-
-.connection-2::before {
-  animation-delay: -0.8s;
-}
-
-.connection-3::before {
-  animation-delay: -1.4s;
-}
-
-.connection-4::before {
-  animation-delay: -2s;
-}
-
-/* =========================================================
    MÓDULOS
 ========================================================= */
 
@@ -3699,7 +3623,7 @@ h3 {
 
   backdrop-filter: blur(10px);
 
-  animation: solution-float 5s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .solution-module:hover {
@@ -3765,22 +3689,16 @@ h3 {
 .module-payments {
   right: 17px;
   top: 47px;
-
-  animation-delay: -1.2s;
 }
 
 .module-process {
   left: 17px;
   bottom: 42px;
-
-  animation-delay: -2.4s;
 }
 
 .module-commerce {
   right: 17px;
   bottom: 42px;
-
-  animation-delay: -3.3s;
 }
 
 /* =========================================================
@@ -3903,8 +3821,6 @@ h3 {
   box-shadow: 0 15px 35px #12386118;
 
   backdrop-filter: blur(13px);
-
-  animation: card-floating 5s ease-in-out infinite;
 }
 
 .floating-card small {
@@ -3933,8 +3849,6 @@ h3 {
 .floating-card-two {
   right: -22px;
   bottom: 92px;
-
-  animation-delay: -2.4s;
 }
 
 .floating-check {
@@ -3984,48 +3898,6 @@ h3 {
   }
 }
 
-@keyframes solution-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes card-floating {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-9px);
-  }
-}
-
-@keyframes connection-travel {
-  0% {
-    left: 0;
-    opacity: 0;
-  }
-
-  12% {
-    opacity: 1;
-  }
-
-  88% {
-    opacity: 1;
-  }
-
-  100% {
-    left: calc(100% - 5px);
-    opacity: 0;
-  }
-}
-
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -4042,10 +3914,6 @@ h3 {
 
   .floating-card-one {
     left: 0;
-  }
-
-  .floating-card-two {
-    right: 0;
   }
 }
 

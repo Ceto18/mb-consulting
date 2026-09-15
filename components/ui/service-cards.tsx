@@ -29,10 +29,10 @@ const services: Service[] = [
     {
         key: 'landing',
         title: 'Landing Page',
-        description: 'Una página diseñada para presentar tu negocio, producto o servicio de forma clara y convertir visitantes en potenciales clientes.',
-        ideal: 'Emprendedores, profesionales, campañas y negocios que necesitan una presencia digital efectiva.',
+        description: 'Para cuando necesitas una presencia digital que presente tu negocio y convierta visitantes en clientes.',
+        ideal: 'Emprendedores, profesionales y negocios que necesitan estar online de forma efectiva.',
         features: ['Diseño personalizado', 'Adaptable a móviles', 'Formularios', 'WhatsApp', 'SEO básico', 'Carga optimizada'],
-        detail: 'Creamos una página enfocada en comunicar tu propuesta, generar confianza y facilitar que tus visitantes den el siguiente paso.',
+        detail: 'Una página enfocada en comunicar tu propuesta, generar confianza y facilitar que tus visitantes den el siguiente paso.',
         modalFeatures: [
             'Diseño personalizado',
             'Sección principal de alto impacto',
@@ -53,10 +53,10 @@ const services: Service[] = [
     {
         key: 'system',
         title: 'Sistema Web',
-        description: 'Una herramienta creada para organizar información, digitalizar procesos y facilitar la operación diaria de tu negocio.',
-        ideal: 'Empresas y negocios que necesitan gestionar procesos, usuarios o información desde una sola plataforma.',
+        description: 'Para cuando necesitas digitalizar procesos, organizar información y facilitar la operación diaria de tu negocio.',
+        ideal: 'Empresas y negocios que gestionan procesos, usuarios o información desde una sola plataforma.',
         features: ['Usuarios y accesos', 'Panel de gestión', 'Gestión de información', 'Reportes', 'Integraciones', 'Base de datos'],
-        detail: 'Desarrollamos sistemas web adaptados a la forma en que trabaja tu negocio, centralizando información y simplificando tareas que hoy requieren más tiempo.',
+        detail: 'Sistemas web adaptados a la forma en que trabaja tu negocio, centralizando información y simplificando tareas.',
         modalFeatures: [
             'Acceso seguro',
             'Usuarios y perfiles',
@@ -79,10 +79,10 @@ const services: Service[] = [
     {
         key: 'custom',
         title: 'Solución a Medida',
-        description: 'Para ideas, procesos y proyectos que necesitan funcionalidades específicas, automatizaciones o conexión entre diferentes herramientas.',
-        ideal: 'Empresas con necesidades particulares que no encajan en una solución estándar.',
+        description: 'Para cuando tu necesidad no encaja en una solución estándar y necesitas funcionalidades específicas o integraciones.',
+        ideal: 'Empresas con necesidades particulares, automatizaciones o conexión entre diferentes herramientas.',
         features: ['Automatizaciones', 'Integraciones', 'Procesos personalizados', 'Herramientas internas', 'Plataformas a medida', 'Desarrollo por etapas'],
-        detail: 'Diseñamos una solución alrededor de tus procesos y objetivos, incorporando únicamente las funcionalidades que realmente aportan valor.',
+        detail: 'Diseñamos una solución alrededor de tus procesos y objetivos, incorporando únicamente las funcionalidades que aportan valor.',
         modalFeatures: [
             'Automatización de tareas',
             'Conexión entre plataformas',

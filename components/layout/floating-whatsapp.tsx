@@ -1,6 +1,6 @@
 export function FloatingWhatsApp() {
     const phone = '51921011040'
-    const message = 'Hola, vi la página de MB Consulting'
+    const message = 'Hola, vi la página de MB Solutions'
 
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 

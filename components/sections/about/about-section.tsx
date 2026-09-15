@@ -1,19 +1,19 @@
 import { CircleCheck, Compass, Layers3, MessageCircle } from 'lucide-react'
 
-const principles = [
+const values = [
     {
         title: 'Cercanía',
-        description: 'Comunicación directa durante cada etapa del proyecto.',
+        description: 'Comunicación directa durante todo el proyecto. No tienes que hablar con un intermediario.',
         icon: MessageCircle,
     },
     {
         title: 'Claridad',
-        description: 'Alcance, objetivos y proceso definidos desde el inicio.',
+        description: 'Alcance, objetivos y proceso definidos desde el inicio, sin sorpresas ni costes ocultos.',
         icon: Compass,
     },
     {
         title: 'Adaptabilidad',
-        description: 'Soluciones preparadas para evolucionar junto con tu negocio.',
+        description: 'Soluciones preparadas para evolucionar. La tecnología se adapta a tu negocio, no al contrario.',
         icon: Layers3,
     },
 ]
@@ -24,7 +24,7 @@ export function AboutSection() {
             <div className="container about-grid">
                 <div className="about-visual">
                     <div className="about-card-main">
-                        <span className="about-badge">MB Consulting</span>
+                        <span className="about-badge">MB Solutions</span>
 
                         <h3>Ideas claras.<br /><span>Soluciones que funcionan.</span></h3>
 
@@ -38,38 +38,27 @@ export function AboutSection() {
                             <span><CircleCheck /> Acompañamiento durante el proyecto</span>
                         </div>
                     </div>
-
-                    <div className="about-floating about-floating-one">
-                        <strong>01</strong>
-                        <span>Entendemos</span>
-                    </div>
-
-                    <div className="about-floating about-floating-two">
-                        <strong>02</strong>
-                        <span>Diseñamos</span>
-                    </div>
-
-                    <div className="about-floating about-floating-three">
-                        <strong>03</strong>
-                        <span>Construimos</span>
-                    </div>
                 </div>
 
                 <div className="about-content">
-                    <p className="eyebrow">Sobre MB Consulting</p>
+                    <p className="eyebrow">Sobre MB Solutions</p>
 
                     <h2>Tecnología cercana, <span>soluciones bien pensadas.</span></h2>
 
                     <p className="body-copy">
-                        MB Consulting nace para ayudar a empresas, profesionales y emprendimientos a convertir ideas, necesidades y procesos en soluciones digitales funcionales.
+                        MB Solutions nace para ayudar a empresas, profesionales y emprendimientos a convertir ideas, necesidades y procesos en soluciones digitales funcionales.
                     </p>
 
                     <p className="body-copy about-highlight">
                         <strong>Primero entendemos qué necesitas. Después definimos la mejor forma de hacerlo realidad.</strong>
                     </p>
 
+                    <p className="body-copy">
+                        No vendemos paquetes genéricos ni soluciones innecesariamente complejas. Cada proyecto parte de una conversación, de entender el problema y definir la solución que realmente tiene sentido.
+                    </p>
+
                     <div className="about-principles">
-                        {principles.map(({ title, description, icon: Icon }) => (
+                        {values.map(({ title, description, icon: Icon }) => (
                             <div key={title}>
                                 <Icon />
                                 <strong>{title}</strong>

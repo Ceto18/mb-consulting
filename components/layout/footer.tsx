@@ -59,7 +59,7 @@ export function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <span>© 2026 MB Consulting. Todos los derechos reservados.</span>
+                    <span>© 2026 MB Solutions. Todos los derechos reservados.</span>
 
                     <a href="#home">
                         Volver al inicio ↑
