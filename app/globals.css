@@ -1266,6 +1266,42 @@ h3 {
 }
 
 /* Premium service cards and project presentation */
+.solutions-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 52px;
+  padding: 28px;
+  border-radius: 16px;
+  background: #f0f7ff;
+  border: 1px solid #dbeafe;
+  text-align: center;
+}
+.solutions-help p {
+  margin: 0;
+  color: #475569;
+  font-size: 15px;
+}
+.solutions-help a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+.solutions-help a:hover {
+  color: #1d4ed8;
+}
+.solutions-help a::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+.solutions-help a:hover::after {
+  transform: translateX(3px);
+}
 .premium-services {
   align-items: stretch;
   gap: 20px;
@@ -1535,12 +1571,32 @@ h3 {
 .service-card-body {
   padding: 4px 28px 28px;
 }
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.service-tag {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.featured-service .service-tag {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
 .service-icon {
   display: grid;
   place-items: center;
   width: 42px;
   height: 42px;
-  margin-bottom: 18px;
   border-radius: 12px;
   color: #2563eb;
   background: #eff6ff;
@@ -1552,22 +1608,37 @@ h3 {
 .service-icon svg {
   width: 21px;
 }
-.service-description {
-  min-height: 75px;
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
 }
-.ideal {
+.service-description {
+  min-height: 60px;
+  margin-bottom: 18px;
+}
+.service-ideal {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  min-height: 58px;
+  gap: 3px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border-left: 3px solid #2563eb;
+}
+.service-ideal strong {
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.service-ideal span {
   color: #64748b;
   font-size: 12px;
+  line-height: 1.5;
 }
-.ideal strong {
-  color: #0f172a;
-  font-size: 12px;
-}
-.service-card ul {
+.service-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9px 10px;
@@ -1577,15 +1648,16 @@ h3 {
   color: #475569;
   font-size: 12px;
 }
-.service-card li {
+.service-features li {
   display: flex;
   gap: 6px;
   align-items: center;
 }
-.service-card li svg,
+.service-features li svg,
 .dialog-features svg {
   width: 14px;
   color: #06b6d4;
+  flex-shrink: 0;
 }
 .service-footer {
   display: flex;
@@ -1644,6 +1716,28 @@ h3 {
   display: flex;
   align-items: center;
   gap: 7px;
+}
+.dialog-ideal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #f0f7ff;
+  border-left: 3px solid #2563eb;
+}
+.dialog-ideal strong {
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.dialog-ideal span {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
 }
 .dialog-note {
   margin: 22px 0;
@@ -1884,6 +1978,16 @@ h3 {
   .service-actions .button,
   .text-action {
     justify-content: center;
+  }
+  .service-features {
+    grid-template-columns: 1fr 1fr;
+  }
+  .solutions-help {
+    padding: 20px;
+  }
+  .solutions-help p,
+  .solutions-help a {
+    font-size: 14px;
   }
   .project-image-wrap,
   .project-placeholder {

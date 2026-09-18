@@ -17,6 +17,7 @@ type ServiceKey = 'landing' | 'system' | 'custom'
 type Service = {
     key: ServiceKey
     title: string
+    tag: string
     description: string
     ideal: string
     features: string[]
@@ -29,7 +30,8 @@ const services: Service[] = [
     {
         key: 'landing',
         title: 'Landing Page',
-        description: 'Para cuando necesitas una presencia digital que presente tu negocio y convierta visitantes en clientes.',
+        tag: 'Presencia digital',
+        description: 'Una página que presenta tu negocio de forma clara y convierte visitantes en clientes.',
         ideal: 'Emprendedores, profesionales y negocios que necesitan estar online de forma efectiva.',
         features: ['Diseño personalizado', 'Adaptable a móviles', 'Formularios', 'WhatsApp', 'SEO básico', 'Carga optimizada'],
         detail: 'Una página enfocada en comunicar tu propuesta, generar confianza y facilitar que tus visitantes den el siguiente paso.',
@@ -53,7 +55,8 @@ const services: Service[] = [
     {
         key: 'system',
         title: 'Sistema Web',
-        description: 'Para cuando necesitas digitalizar procesos, organizar información y facilitar la operación diaria de tu negocio.',
+        tag: 'Gestión interna',
+        description: 'Una herramienta para digitalizar procesos, organizar información y facilitar la operación diaria.',
         ideal: 'Empresas y negocios que gestionan procesos, usuarios o información desde una sola plataforma.',
         features: ['Usuarios y accesos', 'Panel de gestión', 'Gestión de información', 'Reportes', 'Integraciones', 'Base de datos'],
         detail: 'Sistemas web adaptados a la forma en que trabaja tu negocio, centralizando información y simplificando tareas.',
@@ -79,7 +82,8 @@ const services: Service[] = [
     {
         key: 'custom',
         title: 'Solución a Medida',
-        description: 'Para cuando tu necesidad no encaja en una solución estándar y necesitas funcionalidades específicas o integraciones.',
+        tag: 'Hecho a tu medida',
+        description: 'Para necesidades que no encajan en una solución estándar: automatizaciones, integraciones o funcionalidades específicas.',
         ideal: 'Empresas con necesidades particulares, automatizaciones o conexión entre diferentes herramientas.',
         features: ['Automatizaciones', 'Integraciones', 'Procesos personalizados', 'Herramientas internas', 'Plataformas a medida', 'Desarrollo por etapas'],
         detail: 'Diseñamos una solución alrededor de tus procesos y objetivos, incorporando únicamente las funcionalidades que aportan valor.',
@@ -105,7 +109,7 @@ function ServicePreview({ serviceKey }: { serviceKey: ServiceKey }) {
             <div className="service-preview browser-preview">
                 <div className="preview-bar">
                     <i /><i /><i />
-                    <span>mbconsulting.es</span>
+                    <span>mbsolutions.es</span>
                 </div>
 
                 <div className="mini-site">
@@ -183,21 +187,24 @@ export function ServiceCards() {
                         <ServicePreview serviceKey={service.key} />
 
                         <div className="service-card-body">
-                            <div className="service-icon">
-                                {service.key === 'landing' && <Globe2 />}
-                                {service.key === 'system' && <LayoutDashboard />}
-                                {service.key === 'custom' && <Network />}
+                            <div className="service-header">
+                                <span className="service-tag">{service.tag}</span>
+                                <div className="service-icon">
+                                    {service.key === 'landing' && <Globe2 />}
+                                    {service.key === 'system' && <LayoutDashboard />}
+                                    {service.key === 'custom' && <Network />}
+                                </div>
                             </div>
 
                             <h3>{service.title}</h3>
                             <p className="service-description">{service.description}</p>
 
-                            <p className="ideal">
+                            <div className="service-ideal">
                                 <strong>Ideal para</strong>
-                                {service.ideal}
-                            </p>
+                                <span>{service.ideal}</span>
+                            </div>
 
-                            <ul>
+                            <ul className="service-features">
                                 {service.features.map(feature => (
                                     <li key={feature}>
                                         <Check />
@@ -229,7 +236,7 @@ export function ServiceCards() {
             <Dialog open={Boolean(selected)} onOpenChange={open => !open && setSelected(null)}>
                 <DialogContent className="service-dialog">
                     <DialogHeader>
-                        <span className="eyebrow">Solución</span>
+                        <span className="eyebrow">{selected?.tag}</span>
                         <DialogTitle>{selected?.title}</DialogTitle>
                         <DialogDescription>{selected?.detail}</DialogDescription>
                     </DialogHeader>
@@ -245,6 +252,11 @@ export function ServiceCards() {
                                 </span>
                             ))}
                         </div>
+                    </div>
+
+                    <div className="dialog-ideal">
+                        <strong>Ideal para</strong>
+                        <span>{selected?.ideal}</span>
                     </div>
 
                     <p className="dialog-note">
